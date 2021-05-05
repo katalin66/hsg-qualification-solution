@@ -1,0 +1,74 @@
+{
+  "name": "registrations",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.13",
+    "@testing-library/dom": "^7.29.4",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.6.3",
+    "babel-jest": "^26.6.3",
+    "bootstrap": "^5.0.0-beta3",
+    "eslint": "^7.21.0",
+    "esm": "^3.2.25",
+    "fakerator": "^0.3.2",
+    "firebase": "^8.4.2",
+    "firebase-admin": "^9.5.0",
+    "firestore-jest-mock": "^0.9.0",
+    "jasmine": "^3.6.3",
+    "jasmine-parameterized": "^0.4.0",
+    "jest-expect-message": "^1.0.2",
+    "jsdom": "^16.4.0",
+    "lodash": "^4.17.20",
+    "node": "^16.0.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "4.0.3",
+    "sass": "^1.32.11",
+    "validator": "^13.5.2",
+    "web-vitals": "^1.0.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "loadData": "node -r esm src/loadData.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(scss|css)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "setupFilesAfterEnv": [
+      "jest-expect-message"
+    ],
+    "reporters": [
+      "default"
+    ],
+    "testEnvironment": "node"
+  }
+}
